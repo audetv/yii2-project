@@ -25,21 +25,13 @@ use yii\helpers\Html;
 
             <?= $form->field($model, 'password_repeat', ['template' => $passwordTemplate])->input('password', ['placeholder' => 'Повторите пароль']) ?>
 
-                <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="Confirm Password">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-block">Сохранить</button>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Change password</button>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <?php ActiveForm::end(); ?>
+                <!-- /.col -->
+            </div>
+            <?php ActiveForm::end(); ?>
 
             <p class="mt-3 mb-1">
                 <?= Html::a('Вход', ['auth/auth/login']); ?>
