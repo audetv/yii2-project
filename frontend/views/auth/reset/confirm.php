@@ -21,7 +21,7 @@ use yii\helpers\Html;
                             <span class=\"fas fa-lock\"></span>
                         </div>
                     </div>\n{hint}\n{error}"; ?>
-            <?= $form->field($model, 'password', ['template' => $passwordTemplate])->textInput(['autofocus' => true, 'placeholder' => 'Новый пароль']) ?>
+            <?= $form->field($model, 'password', ['template' => $passwordTemplate])->input('password', ['autofocus' => true, 'placeholder' => 'Новый пароль']) ?>
 
             <?= $form->field($model, 'password_repeat', ['template' => $passwordTemplate])->input('password', ['placeholder' => 'Повторите пароль']) ?>
 
