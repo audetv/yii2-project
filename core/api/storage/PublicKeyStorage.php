@@ -10,8 +10,8 @@ class PublicKeyStorage implements PublicKeyInterface
 {
     private $publicKey;
     private $privateKey;
-    public $publicKeyFileName = 'jwtRS256.key.pub';
-    public $privateKeyFileName = 'jwtRS256.key';
+    public $publicKeyFileName = 'pubkey.pem';
+    public $privateKeyFileName = 'privkey.pem';
 
     public function __construct()
     {
