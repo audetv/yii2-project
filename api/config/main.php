@@ -86,8 +86,8 @@ return [
         ],
         'user' => [
             'identityClass' => Identity::class,
-                'enableAutoLogin' => false,
-                'enableSession' => false,
+            'enableAutoLogin' => false,
+            'enableSession' => false,
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -96,30 +96,13 @@ return [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
-                /*[
-                    'class' => 'yii\log\EmailTarget',
-                    'levels' => [
-                        'error'
-                    ],
-                    'except' => [
-                        'yii\web\HttpException:404'
-                    ],
-                    'message' => [
-                        'from' => ['support@gcplus.ru'],
-                        'to' => ['chevlider@gmail.com', 'chev@ao-solomon.com'],
-                        'subject' => 'Ошибки на сайте mebel-canyon.ru',
-                    ],
-                ],*/
             ],
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'enableStrictParsing' => true,
             'showScriptName' => false,
-            'rules' => [
-                '' => 'site/index',
-                'POST oauth2/<action:\w+>' => 'oauth2/rest/<action>',
-            ],
+            'rules' => require __DIR__ . '/routes.php',
         ],
     ],
     'params' => $params,
